@@ -18,6 +18,7 @@ public class TestController {
     @Autowired
     TestQueryService testQueryService;
 
+    //访问地址http://localhost:8081/queryTest/findTestNoQuery?page=xxx&size=xxx
     @RequestMapping("/findTestNoQuery")
     public Page<Test> findTestNoQuery(Integer page, Integer size){
         Page<Test> datas=testQueryService.findTestNoCriteria(page,size);

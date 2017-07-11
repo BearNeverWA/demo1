@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/7/10.
  */
-@Controller
+@RestController
 @RequestMapping(value = "/queryTest")
 public class TestController {
 
@@ -19,9 +21,8 @@ public class TestController {
     TestQueryService testQueryService;
 
     @RequestMapping("/findTestNoQuery")
-    public String findTestNoQuery(ModelMap modelMap, @RequestParam(value = "page",defaultValue = "0")Integer page,@RequestParam(value = "size",defaultValue = "1")Integer size){
+    public Page<Test> findTestNoQuery(Integer page, Integer size){
         Page<Test> datas=testQueryService.findTestNoCriteria(page,size);
-        modelMap.addAttribute("datas",datas);
-        return "index1";
+        return datas;
     }
 }

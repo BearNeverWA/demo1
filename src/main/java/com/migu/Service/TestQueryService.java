@@ -1,8 +1,7 @@
-package com.migu;
+package com.migu.Service;
 
+import com.migu.Entity.Test;
 import org.springframework.data.domain.Page;
-
-import java.util.List;
 
 /**
  * Created by Administrator on 2017/7/10.

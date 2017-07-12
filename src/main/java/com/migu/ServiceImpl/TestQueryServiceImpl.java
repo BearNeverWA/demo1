@@ -1,13 +1,14 @@
-package com.migu;
+package com.migu.ServiceImpl;
 
+import com.migu.Entity.Test;
+import com.migu.Service.TestQueryService;
+import com.migu.Repository.TestRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * Created by Administrator on 2017/7/10.

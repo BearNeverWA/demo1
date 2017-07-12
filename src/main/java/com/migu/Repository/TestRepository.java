@@ -1,5 +1,6 @@
-package com.migu;
+package com.migu.Repository;
 
+import com.migu.Entity.Test;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

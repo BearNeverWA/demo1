@@ -1,34 +1,12 @@
-package com.migu;
-
-import javax.persistence.*;
+package com.migu.Entity;
 
 /**
  * Created by Administrator on 2017/7/10.
- * 数据库实体类
  */
-@Entity
-@Table(name = "test")
-public class Test {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false)
+public class TestQuery {
     private Integer id;
-
-    @Column(nullable = false, name = "name")
     private String name;
-
-    @Column(nullable = false, name = "age")
     private Integer age;
-
-    public Test(Integer id, String name, Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-
-    public Test() {
-
-    }
 
     public Integer getId() {
         return id;
